@@ -1,0 +1,32 @@
+:root {
+  --dark-blue: #253866;
+  --light-blue: #4667BB;
+}
+
+body {
+  background: black;
+}
+
+.btn {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14.52px;
+  color: #fff;
+  border: 1.5px solid #fff;
+  border-radius: 27px;
+  padding: 10px 20px;
+  background: transparent;
+}
+
+.btn:hover {
+  color: var(--dark-blue);
+  border-color: var(--dark-blue);
+  cursor: pointer;
+}
+
+.btn:active {
+  background: var(--dark-blue);
+  border-color: var(--dark-blue);
+  color: #fff;
+  cursor: pointer;
+}
