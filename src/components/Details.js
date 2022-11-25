@@ -2,6 +2,7 @@ import Button from './Button'
 import Icon from './Icon'
 import Badge from './Badge'
 import Email from './Email'
+import Date from './Date'
 
 const Details = ({ user }) => {
   return (
@@ -22,13 +23,7 @@ const Details = ({ user }) => {
         />
         {`${user.address.city}, ${user.address.country}`}
       </p>
-      <p className="details__birthday">
-        <Icon path={new URL('../images/calendar.svg', import.meta.url)}
-          className="icon"
-          alt=""
-        />
-        {user.date_of_birth}
-      </p>
+      <Date date_of_birth={user.date_of_birth} />
       <div className="details__button-wrapper">
         <Button
           text="Contact"
