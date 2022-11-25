@@ -1,10 +1,12 @@
 import Button from './Button'
 import Icon from './Icon'
 
-const Details = () => {
+const Details = ({ user }) => {
   return (
     <div className="details">
-      <h2 className="details__title">Jessica Award</h2>
+      <h2 className="details__title">
+        {user.first_name} {user.last_name}
+      </h2>
 
       <hr />
 
@@ -14,20 +16,20 @@ const Details = () => {
           className="icon"
           alt=""
         />
-        jessaw56@gmail.com
+        {user.email}
       </p>
       <p className="details__location">
         <Icon path={new URL('../images/location.svg', import.meta.url)}
           className="icon"
         />
-        Paris, France
+        {`${user.address.city}, ${user.address.country}`}
       </p>
       <p className="details__birthday">
         <Icon path={new URL('../images/calendar.svg', import.meta.url)}
           className="icon"
           alt=""
         />
-        12/01/2002
+        {user.date_of_birth}
       </p>
       <div className="details__button-wrapper">
         <Button

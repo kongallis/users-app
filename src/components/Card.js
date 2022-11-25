@@ -1,16 +1,16 @@
 import Details from "./Details"
 
-const Card = ({ text, className }) => {
+const Card = ({ user }) => {
   return (
     <article className="card">
       <img
-        src="https://robohash.org/estinea.png?size=300x300&set=set1"
+        src={user.avatar}
         alt=""
         width=""
         height=""
         loading="lazy"
       />
-      <Details />
+      <Details user={user} />
     </article>
   )
 }
