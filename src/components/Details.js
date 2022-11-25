@@ -1,12 +1,16 @@
 import Button from './Button'
 import Icon from './Icon'
+import Badge from './Badge'
 
 const Details = ({ user }) => {
   return (
     <div className="details">
-      <h2 className="details__title">
-        {user.first_name} {user.last_name}
-      </h2>
+      <div className='details__headline'>
+        <h2 className="details__title">
+          {user.first_name} {user.last_name}
+        </h2>
+        <Badge text="New" />
+      </div>
 
       <hr />
 
