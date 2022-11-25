@@ -9,7 +9,7 @@
     "build-dev": "parcel build ./src/index.html --no-optimize --public-url ./",
     "prebuild": "shx rm -rf dist/*",
     "build": "parcel build ./src/index.html --public-url ./",
-    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
+    "push-gh-pages": "push-dir --dir=dist --branch=master --cleanup --verbose"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +20,8 @@
     "shx": "^0.3.2"
   },
   "dependencies": {
+    "parcel-bundler": "^1.12.5",
+    "push-dir": "^0.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-lazy-load-image-component": "^1.5.6"
