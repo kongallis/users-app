@@ -1,12 +1,25 @@
+/* CSS variables */
 :root {
   --dark-blue: #253866;
   --light-blue: #4667BB;
 }
 
-body {
-  background: black;
+* {
+  box-sizing: border-box;
 }
 
+/* Font setup */
+body {
+  font-family: 'Inter', serif;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Custom styles */
 .btn {
   font-weight: 500;
   font-size: 12px;
@@ -14,8 +27,9 @@ body {
   color: #fff;
   border: 1.5px solid #fff;
   border-radius: 27px;
-  padding: 10px 20px;
+  padding: 6.5px 13px;
   background: transparent;
+  transition: all linear 0.3s;
 }
 
 .btn:hover {
@@ -29,4 +43,49 @@ body {
   border-color: var(--dark-blue);
   color: #fff;
   cursor: pointer;
+}
+
+.card {
+  position: relative;
+  max-width: 208px;
+  min-height: 321px;
+  border-radius: 20px;
+}
+
+.details {
+  width: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, #E2E2EF 43.73%, #4667BB 100%);
+  border-radius: 20px;
+  position: absolute;
+  bottom: 0;
+  color: var(--dark-blue);
+  padding: 0 16px;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.details p {
+  display: flex;
+}
+
+.icon {
+  margin-right: 6px;
+}
+
+hr {
+  border: 0.5px solid var(--dark-blue);
+}
+
+.details__title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  margin: 16px 0 8px 0;
+}
+
+.details__button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
 }
