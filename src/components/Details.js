@@ -20,6 +20,7 @@ const Details = ({ user }) => {
       <p className="details__location">
         <Icon path={new URL('../images/location.svg', import.meta.url)}
           className="icon"
+          alt=""
         />
         {`${user.address.city}, ${user.address.country}`}
       </p>
