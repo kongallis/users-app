@@ -6,10 +6,9 @@ const App = () => {
 
   useEffect(() => {
     async function getUsers() {
-      const result = fetch('https://random-data-api.com/api/v2/users?size=5')
+      const result = await fetch('https://random-data-api.com/api/v2/users?size=25')
         .then(response => response.json())
         .then(data => setUsers(data))
-        .then(console.log(users))
     }
 
     getUsers();
