@@ -99,3 +99,18 @@ hr {
   align-items: center;
   margin: 20px 0;
 }
+
+.details__headline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.badge {
+  color: #fff;
+  font-weight: 400;
+  font-size: 8px;
+  background: var(--light-blue);
+  border-radius: 27px;
+  padding: 2px 4px;
+}
