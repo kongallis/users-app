@@ -25,11 +25,13 @@ const Details = ({ user }) => {
       </p>
       <Date date_of_birth={user.date_of_birth} />
       <div className="details__button-wrapper">
-        <Button
-          text="Contact"
-          className="btn"
-          alt=""
-        />
+        <a href={`tel:${user.phone_number}`}>
+          <Button
+            text="Contact"
+            className="btn"
+            alt=""
+          />
+        </a>
       </div>
     </div>)
 }
