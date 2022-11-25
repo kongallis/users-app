@@ -2,6 +2,7 @@
 :root {
   --dark-blue: #253866;
   --light-blue: #4667BB;
+  --warning-red: ##E63A3A;
 }
 
 /* General styles */
@@ -141,6 +142,15 @@ hr {
   background: var(--light-blue);
   border-radius: 2.7rem;
   padding: 0.2rem 0.4rem;
+}
+
+.error,
+.loading {
+  font-size: 1.6rem;
+}
+
+.error {
+  color: var(--warning-red);
 }
 
 /* Responsive */
