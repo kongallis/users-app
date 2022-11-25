@@ -8,6 +8,9 @@ git clone blah blah
 ```
 
 2. Go to directory "users-app"
+```bash
+cd users-app
+```
 
 3. Install node packages
 ```bash
