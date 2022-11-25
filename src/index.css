@@ -8,6 +8,16 @@
   box-sizing: border-box;
 }
 
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+
 /* Font setup */
 body {
   font-family: 'Inter', serif;
@@ -91,6 +101,11 @@ hr {
   font-weight: 700;
   line-height: 19px;
   margin: 16px 0 8px 0;
+}
+
+.details__email a {
+  display: flex;
+  align-items: center;
 }
 
 .details__button-wrapper {

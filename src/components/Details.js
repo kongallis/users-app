@@ -1,6 +1,7 @@
 import Button from './Button'
 import Icon from './Icon'
 import Badge from './Badge'
+import Email from './Email'
 
 const Details = ({ user }) => {
   return (
@@ -14,14 +15,7 @@ const Details = ({ user }) => {
 
       <hr />
 
-      <p className="details__email">
-        <Icon
-          path={new URL('../images/email.svg', import.meta.url)}
-          className="icon"
-          alt=""
-        />
-        {user.email}
-      </p>
+      <Email email={user.email} />
       <p className="details__location">
         <Icon path={new URL('../images/location.svg', import.meta.url)}
           className="icon"
