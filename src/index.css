@@ -4,8 +4,14 @@
   --light-blue: #4667BB;
 }
 
+/* General styles */
 * {
   box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 62.5%;
 }
 
 a:link,
@@ -16,7 +22,6 @@ a:active {
   background-color: transparent;
   text-decoration: none;
 }
-
 
 /* Font setup */
 body {
@@ -33,23 +38,25 @@ img {
 .users-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   list-style: none;
+  padding: 0;
 }
 
 .users-list li {
-  margin: 10px 5px;
+  margin: 1rem 0.5rem;
 }
 
 .btn {
   font-weight: 500;
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 14.52px;
   color: #fff;
-  border: 1.5px solid #fff;
-  border-radius: 27px;
-  padding: 6.5px 13px;
+  border: 0.15rem solid #fff;
+  border-radius: 2.7rem;
+  padding: 0.65rem 1.3rem;
   background: transparent;
-  transition: all linear 0.3s;
+  transition: all 0.3s linear;
 }
 
 .btn:hover {
@@ -67,21 +74,27 @@ img {
 
 .card {
   position: relative;
-  max-width: 208px;
-  min-height: 321px;
-  border-radius: 20px;
+  max-width: 20.8rem;
+  min-height: 32.1rem;
+  border-radius: 2rem;
+  transition: all 0.5s ease;
+}
+
+.card:hover {
+  background: rgba(70, 103, 187, 0.3);
+  transform: translateY(-3px);
 }
 
 .details {
   width: 100%;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, #E2E2EF 43.73%, #4667BB 100%);
-  border-radius: 20px;
+  border-radius: 2rem;
   position: absolute;
   bottom: 0;
   color: var(--dark-blue);
-  padding: 0 16px;
-  font-size: 10px;
-  line-height: 12px;
+  padding: 0 1.6rem;
+  font-size: 1rem;
+  line-height: 1.2rem;
 }
 
 .details p {
@@ -89,7 +102,7 @@ img {
 }
 
 .icon {
-  margin-right: 6px;
+  margin-right: 0.6rem
 }
 
 hr {
@@ -97,10 +110,10 @@ hr {
 }
 
 .details__title {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 700;
-  line-height: 19px;
-  margin: 16px 0 8px 0;
+  line-height: 1.9rem;
+  margin: 1.6rem 0 0.8rem 0;
 }
 
 .details__email a {
@@ -112,7 +125,7 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0;
+  margin: 2rem 0;
 }
 
 .details__headline {
@@ -124,8 +137,15 @@ hr {
 .badge {
   color: #fff;
   font-weight: 400;
-  font-size: 8px;
+  font-size: 0.8rem;
   background: var(--light-blue);
-  border-radius: 27px;
-  padding: 2px 4px;
+  border-radius: 2.7rem;
+  padding: 0.2rem 0.4rem;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .users-list li {
+    margin: 3.4rem 0.5rem;
+  }
 }
