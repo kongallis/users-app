@@ -4,7 +4,7 @@ This project was built with Vercel
 ## Run app
 1. Clone repo
 ```bash
-git clone blah blah
+git clone users-app
 ```
 
 2. Go to directory "users-app"
