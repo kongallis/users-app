@@ -2,17 +2,22 @@
   "name": "users-app",
   "version": "1.0.0",
   "description": "",
-  "main": "src/App.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel src/index.html"
+    "dev": "parcel src/index.html",
+    "prebuild-dev": "shx rm -rf dist/*",
+    "build-dev": "parcel build ./src/index.html --no-optimize --public-url ./",
+    "prebuild": "shx rm -rf dist/*",
+    "build": "parcel build ./src/index.html --public-url ./",
+    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "parcel": "^2.2.1",
-    "process": "^0.11.10"
+    "process": "^0.11.10",
+    "shx": "^0.3.2"
   },
   "dependencies": {
     "react": "^18.2.0",
