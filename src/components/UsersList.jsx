@@ -13,7 +13,19 @@ const UserList = () => {
         .then(
           data => {
             setIsLoaded(true);
-            setUsers(data)
+
+            const dto = data.map(user => ({
+              id: user.id,
+              avatar: user.avatar,
+              first_name: user.first_name,
+              last_name: user.last_name,
+              email: user.email,
+              address: { city: user.address.city, country: user.address.country },
+              date_of_birth: user.date_of_birth,
+              phone_number: user.phone_number
+            }))
+
+            setUsers(dto)
           },
           error => {
             setIsLoaded(true);
