@@ -1,4 +1,5 @@
 import Icon from './Icon'
+import Svg from "../images"
 
 const formatDate = (date) => {
   const [year, month, day] = date.split("-")
@@ -8,7 +9,7 @@ const formatDate = (date) => {
 const Date = ({ date_of_birth }) => {
   return (
     <p className="details__birthday">
-      <Icon path={new URL('../images/calendar.svg', import.meta.url)}
+      <Icon path={Svg.Calendar}
         className="icon"
         alt=""
       />

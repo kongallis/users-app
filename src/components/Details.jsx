@@ -3,6 +3,7 @@ import Icon from './Icon'
 import Badge from './Badge'
 import Email from './Email'
 import Date from './Date'
+import Svg from "../images"
 
 const Details = ({ user }) => {
   return (
@@ -18,7 +19,7 @@ const Details = ({ user }) => {
 
       <Email email={user.email} />
       <p className="details__location">
-        <Icon path={new URL('../images/location.svg', import.meta.url)}
+        <Icon path={Svg.Location}
           className="icon"
           alt=""
         />
