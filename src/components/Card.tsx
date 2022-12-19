@@ -1,8 +1,9 @@
 import Details from "./Details"
-import { LazyLoadImage } from "react-lazy-load-image-component"
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'
+import User from "../types/User"
 
-const Card = ({ user }) => {
+const Card = ({ user }: { user: User }) => {
   return (
     <article className="card">
       <LazyLoadImage

@@ -4,8 +4,9 @@ import Badge from './Badge'
 import Email from './Email'
 import Date from './Date'
 import Svg from "../images"
+import User from "../types/User"
 
-const Details = ({ user }) => {
+const Details = ({ user }: { user: User }) => {
   return (
     <div className="details">
       <div className='details__headline'>
@@ -31,7 +32,6 @@ const Details = ({ user }) => {
           <Button
             text="Contact"
             className="btn"
-            alt=""
           />
         </a>
       </div>
