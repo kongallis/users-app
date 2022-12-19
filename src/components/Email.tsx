@@ -1,7 +1,11 @@
 import Icon from "./Icon"
 import Svg from "../images"
 
-const Email = ({ email }) => {
+type EmailProps = {
+  email: string
+}
+
+const Email = ({ email }: EmailProps) => {
   return (
     <p className="details__email">
       <a href={`mailto:${email}`}>

@@ -1,12 +1,16 @@
 import Icon from './Icon'
 import Svg from "../images"
 
-const formatDate = (date) => {
+type DateProps = {
+  date_of_birth: string
+}
+
+const formatDate = (date: string) => {
   const [year, month, day] = date.split("-")
   return `${day}/${month}/${year}`
 }
 
-const Date = ({ date_of_birth }) => {
+const Date = ({ date_of_birth }: DateProps) => {
   return (
     <p className="details__birthday">
       <Icon path={Svg.Calendar}
