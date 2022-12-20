@@ -1,8 +1,11 @@
 import UsersList from "./components/UsersList"
+import ErrorBoundary from "./components/ErrorBoundary"
 
 const App = () => {
   return (
-    <UsersList />
+    <ErrorBoundary>
+      <UsersList />
+    </ErrorBoundary>
   )
 }
 

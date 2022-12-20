@@ -37,14 +37,13 @@ const UserList = () => {
     getUsers()
   }, [])
 
-
   if (error) {
     return <div className="error">Error: {error.message}</div>
   } else if (!isLoaded) {
     return <div className="loading">Loading...</div>
   } else {
     return (
-      <ul className="users-list">
+      <ul ul className="users-list" >
         {
           users.map(user => (
             <li key={user.id}>
