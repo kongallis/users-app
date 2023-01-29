@@ -1,13 +1,13 @@
 import {
-    useQuery,
-  } from "@tanstack/react-query";
-  import User from "../types/User";
+  useInfiniteQuery,
+} from "@tanstack/react-query";
+import User from "../types/User";
 
 export default function useUsers() {
-    return useQuery({
-      queryKey: ["posts"],
-      queryFn: async () => {
-        const data = await fetch('https://random-data-api.com/api/v2/users?size=25')
+  return useInfiniteQuery({
+    queryKey: ["users"],
+    queryFn: async ({ pageParam = 25 }) => {
+      const data = await fetch(`https://random-data-api.com/api/v2/users?size=${pageParam}`)
         .then(response => response.json())
         .then(data => {
           const dto = data.map((user: User) => ({
@@ -24,7 +24,11 @@ export default function useUsers() {
           return dto
         })
 
-        return data
-      },
-    });
-  }
+      return data
+    },
+    getNextPageParam: (lastPage, allPages) => {
+      const nextPage = allPages.length + 15
+      return nextPage
+    }
+  });
+}

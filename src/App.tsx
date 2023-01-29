@@ -17,18 +17,16 @@ const queryClient = new QueryClient({
 const App = () => {
   return (
     <ErrorBoundary>
-      <QueryClientProvider client={queryClient}>
-        <Suspense
-          fallback={
-            <div className="loading-pane">
-              <h2 className="loader">🌀</h2>
-            </div>
-          }
-        >
+      <Suspense fallback={
+        <div className="loading-pane">
+          <h2 className="loader">🌀</h2>
+        </div>
+      }>
+        <QueryClientProvider client={queryClient}>
           <UsersList />
           <ReactQueryDevtools initialIsOpen={false} />
-        </Suspense>
-      </QueryClientProvider>
+        </QueryClientProvider>
+      </Suspense>
     </ErrorBoundary>
   );
 };
